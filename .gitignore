@@ -1,0 +1,41 @@
+#########################################
+# Editor temporary/working/backup files #
+*.log
+.ipynb_checkpoints
+.cache/
+.vscode/
+*.pytest_cache
+__pycache__
+
+
+# Compiled source #
+###################
+*.pxi
+*.so
+
+# Python files #
+################
+# setup.py working directory
+build
+# sphinx build directory
+doc/_build
+# setup.py dist directory
+dist
+# Egg metadata
+*.egg-info
+.eggs
+.pypirc
+
+# wheel files
+*.whl
+
+# OS generated files #
+######################
+.DS_Store
+
+# Bash scripts #
+################
+
+# Gradle and Maven with auto-import #
+#####################################
+.idea/
