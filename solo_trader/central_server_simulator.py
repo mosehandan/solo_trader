@@ -23,10 +23,10 @@ class Handler(socketserver.BaseRequestHandler):
             if data == b'break':
                 print('=================')
                 break
-            print(pickle.loads(data))
-            # print(data_center.get_data())
-            self.request.send(b'continue')
-            time.sleep(0.1)
+            # print(pickle.loads(data))
+            # self.request.send(b'continue')
+            self.request.send(pickle.dumps(data_center.get_data()))
+            time.sleep(0.5)
             # continue
 
 
@@ -62,6 +62,7 @@ class Client(object):
                 break
             _ = s.send(pickle.dumps(content))
             response = s.recv(1024)
+            print(pickle.loads(response))
             # if response == b'continue':
             #     continue
 

@@ -108,9 +108,9 @@ class DataCenter:
         quote_data = self.sell_data.append(self.buy_data, ignore_index=True).reset_index(drop=True)
         order_data = None
         return {
-            "trade_data": trade_data,
+            "trade_data": trade_data if trade_data is None else trade_data.to_dict(),
             "quote_data": quote_data.to_dict(),
-            "order_data": order_data.to_dict()
+            "order_data": order_data if order_data is None else order_data.to_dict()
         }
 
 
